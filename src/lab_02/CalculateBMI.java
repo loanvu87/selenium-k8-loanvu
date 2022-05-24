@@ -9,13 +9,13 @@ public class CalculateBMI {
         final double bmiNormalWeightMax = 24.9;
 
         System.out.print("Please input your height(m): ");
-        double yourHeight = scanner.nextFloat();
+        double yourHeight = scanner.nextDouble();
 
         System.out.print("Please input your weight(kg): ");
-        double yourWeight = scanner.nextFloat();
+        double yourWeight = scanner.nextDouble();
 
-        double normalWeightMin = bmiNormalWeightMin*(yourHeight*yourHeight);
-        double normalWeightMax = bmiNormalWeightMax*(yourHeight*yourHeight);
+        double normalWeightMin = bmiNormalWeightMin * (yourHeight * yourHeight);
+        double normalWeightMax = bmiNormalWeightMax * (yourHeight * yourHeight);
 
         double bmi = yourWeight / (yourHeight * yourHeight);
 
@@ -27,7 +27,7 @@ public class CalculateBMI {
         } else if (bmi < 30) {
             System.out.println("You are overweight!");
             System.out.println("You should decrease your weight: " + (yourWeight - normalWeightMax));
-        }else{
+        } else {
             System.out.println("You are obesity!");
             System.out.println("You should decrease your weight: " + (yourWeight - normalWeightMax));
         }
