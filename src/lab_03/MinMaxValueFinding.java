@@ -1,7 +1,6 @@
 package lab_03;
 
 public class MinMaxValueFinding {
-
     public static void main(String[] args) {
         int[] arrayNum = {1, 2, 3, 4, 5};
         int minValue = arrayNum[0];
