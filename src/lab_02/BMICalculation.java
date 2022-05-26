@@ -1,12 +1,11 @@
 package lab_02;
 
 import java.util.Scanner;
-
-public class CalculateBMI {
+public class BMICalculation {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        final double bmiNormalWeightMin = 18.5;
-        final double bmiNormalWeightMax = 24.9;
+        final double BMI_NORMAL_WEIGHT_MIN = 18.5;
+        final double BMI_NORMAL_WEIGHT_MAX = 24.9;
 
         System.out.print("Please input your height(m): ");
         double yourHeight = scanner.nextDouble();
@@ -14,8 +13,8 @@ public class CalculateBMI {
         System.out.print("Please input your weight(kg): ");
         double yourWeight = scanner.nextDouble();
 
-        double normalWeightMin = bmiNormalWeightMin * (yourHeight * yourHeight);
-        double normalWeightMax = bmiNormalWeightMax * (yourHeight * yourHeight);
+        double normalWeightMin = BMI_NORMAL_WEIGHT_MIN * (yourHeight * yourHeight);
+        double normalWeightMax = BMI_NORMAL_WEIGHT_MAX * (yourHeight * yourHeight);
 
         double bmi = yourWeight / (yourHeight * yourHeight);
 
