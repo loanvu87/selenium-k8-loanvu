@@ -21,13 +21,18 @@ public class TwoSortedArrayMerge {
             for (int indexNewArray = 0; indexNewArray < newSortedArrayNum.length; indexNewArray++) {
                 if (sortedArrayNum2[indexArrayNum2] < newSortedArrayNum[indexNewArray]) {
                     isMinValue = true;
-                    int j = 1;
                     //thay dổi gia tri cua tung element
-                    for (int k = 0 + indexNewArray; k < newSortedArrayNum.length; k++) {
-                        if(j != newSortedArrayNum.length) {
-                            temp = newSortedArrayNum[newSortedArrayNum.length - 1 - j];
-                            newSortedArrayNum[newSortedArrayNum.length - j] = temp;
-                            j++;
+//                    int j = 1;
+//                    for (int k = 0 + indexNewArray; k < newSortedArrayNum.length; k++) {
+//                        if (j != newSortedArrayNum.length) {
+//                            temp = newSortedArrayNum[newSortedArrayNum.length - 1 - j];
+//                            newSortedArrayNum[newSortedArrayNum.length - j] = temp;
+//                            j++;
+//                        }
+//                    }
+                    for (int length = newSortedArrayNum.length; length > 0 + indexNewArray; length--) {
+                        if (length != 1) {
+                            newSortedArrayNum[length - 1] = newSortedArrayNum[length - 2];
                         }
                     }
                     newSortedArrayNum[indexNewArray] = sortedArrayNum2[indexArrayNum2];
