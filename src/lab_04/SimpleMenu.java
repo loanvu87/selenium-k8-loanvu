@@ -2,6 +2,7 @@ package lab_04;
 
 import java.security.SecureRandom;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -9,7 +10,7 @@ public class SimpleMenu {
 
     public static void main(String[] args) {
         boolean isContinue = true;
-        List<Integer> arrayListNumber = new ArrayList<>();
+        List<Integer> arrayListNumber;
         arrayListNumber = generateNumbers();
         do {
             printMenu();
@@ -68,10 +69,11 @@ public class SimpleMenu {
 
     private static void printAllNumbers(List<Integer> arrayListNumbers) {
         System.out.print("All number is: ");
-        for (int number : arrayListNumbers) {
-            System.out.printf("%d, ", number);
-        }
-        System.out.println(" \n");
+//        for (int number : arrayListNumbers) {
+//            System.out.printf("%d, ", number);
+//        }
+//        System.out.println(" \n");
+        System.out.println(arrayListNumbers);
     }
 
     private static void getMaxValue(List<Integer> arrayListNumbers) {

@@ -1,5 +1,7 @@
 package lab_03;
 
+import java.util.Arrays;
+
 public class TwoSortedArrayMerge {
 
     public static void main(String[] args) {
@@ -49,9 +51,9 @@ public class TwoSortedArrayMerge {
             }
         }
         System.out.print("Value: ");
-        for (int numValue : newSortedArrayNum) {
-            System.out.print(numValue + ", ");
-        }
-
+        System.out.println(Arrays.toString(newSortedArrayNum));
+//        for (int numValue : newSortedArrayNum) {
+//            System.out.print(numValue + ", ");
+//        }
     }
 }
