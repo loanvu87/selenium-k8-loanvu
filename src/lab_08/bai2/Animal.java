@@ -7,7 +7,7 @@ public class Animal {
     int animalSpeed;
 
     public int getSpeed(int speed) {
-        return animalSpeed = new SecureRandom().nextInt(speed);
+        return new SecureRandom().nextInt(speed);
     }
 
     public int getSpeed() {
