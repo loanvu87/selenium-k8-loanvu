@@ -10,8 +10,8 @@ public class AnimalRacing {
         int maxHorseSpeed = 75;
 
         Animal dog = new Dog(maxDogSpeed);
-        Animal horse = new Horse(maxHorseSpeed);
-        Animal tiger = new Tiger(maxTigerSpeed);
+        Animal horse = new Horse(maxTigerSpeed);
+        Animal tiger = new Tiger(maxHorseSpeed);
         new AnimalRacing().getWinner(Arrays.asList(dog, horse, tiger));
     }
 
@@ -26,6 +26,8 @@ public class AnimalRacing {
             if (animalMap.get(name) > maxSpeed) {
                 maxSpeed = animalMap.get(name);
                 winner = name;
+            } else if (animalMap.get(name) == maxSpeed) {
+                winner = winner.concat(",").concat(name);
             }
         }
         System.out.println(animalMap);
