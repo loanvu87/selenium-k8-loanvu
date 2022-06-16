@@ -20,26 +20,26 @@ public class AnimalRacing {
         String winner = "";
         int maxSpeed = 0;
         String animalWithWings = "";
-        Map<String, Integer> animalMap = new HashMap<>();
+        Map<String, Integer> animalRacingMap = new HashMap<>();
         for (Animal animal : animalList) {
             if (animal.isWithWings() == false) {
-                animalMap.put(animal.getAnimalName(), animal.getAnimalSpeed());
+                animalRacingMap.put(animal.getAnimalName(), animal.getAnimalSpeed());
             } else {
                 animalWithWings = (animal.getAnimalName()).concat(", ").concat(animalWithWings);
             }
         }
-        for (String name : animalMap.keySet()) {
-            if (animalMap.get(name) > maxSpeed) {
-                maxSpeed = animalMap.get(name);
+        for (String name : animalRacingMap.keySet()) {
+            if (animalRacingMap.get(name) > maxSpeed) {
+                maxSpeed = animalRacingMap.get(name);
                 winner = name;
-            } else if (animalMap.get(name) == maxSpeed) {
+            } else if (animalRacingMap.get(name) == maxSpeed) {
                 winner = winner.concat(",").concat(name);
             }
         }
         if (animalWithWings != "") {
             System.out.println("Animals that cannot attend the race are: " + animalWithWings);
         }
-        System.out.println("Animals in the race are: " + animalMap);
+        System.out.println("Animals in the race are: " + animalRacingMap);
         System.out.println("Winner is: ".concat(winner).concat(" with ") + maxSpeed + " km/h");
     }
 
