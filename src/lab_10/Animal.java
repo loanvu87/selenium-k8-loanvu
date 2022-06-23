@@ -1,9 +1,6 @@
 package lab_10;
 
 import java.security.SecureRandom;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 public abstract class Animal {
 
