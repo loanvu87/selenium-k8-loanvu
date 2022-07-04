@@ -6,8 +6,8 @@ public class Falcon extends Animal {
     int animalSpeed;
     String name = "con chim ưng";
     public Falcon() {
-        flyBehavior = new AnimalWithWings();
-        speedBehavior = new AnimalSpeed();
+        flyBehavior = new HasWings();
+        speedBehavior = new SelfSpeed();
         this.animalSpeed = speedBehavior.animalSpeed(maxSpeed);
     }
 

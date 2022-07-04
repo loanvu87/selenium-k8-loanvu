@@ -6,8 +6,8 @@ public class Horse extends Animal {
     int animalSpeed;
     String name = "con ngựa";
     public Horse() {
-        flyBehavior = new AnimalNoWings();
-        speedBehavior = new AnimalSpeed();
+        flyBehavior = new NoWings();
+        speedBehavior = new SelfSpeed();
         this.animalSpeed = speedBehavior.animalSpeed(maxSpeed);
     }
 

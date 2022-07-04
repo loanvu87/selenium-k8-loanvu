@@ -2,7 +2,7 @@ package lab_12;
 
 import java.security.SecureRandom;
 
-public class AnimalSpeed implements SpeedBehavior{
+public class SelfSpeed implements SpeedBehavior{
 
     @Override
     public int animalSpeed(int maxSpeed) {

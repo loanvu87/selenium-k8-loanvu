@@ -1,10 +1,8 @@
 package lab_12;
 
-public class AnimalWithWings implements FlyBehavior {
-
+public class HasWings implements FlyBehavior {
     @Override
     public boolean isFlyAble() {
         return true;
     }
-
 }
